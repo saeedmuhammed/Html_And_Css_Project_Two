@@ -1,0 +1,238 @@
+:root {
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+  }
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */ 
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+      
+      
+    }
+  }
+  /* Medium */   /* for iphone x */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+     
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* start header */
+  header {
+    position: relative;
+    padding: 20px 0 50px 0;
+    background-color: transparent;
+    z-index: 1;
+    /* left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    */ 
+     
+  }
+  header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 25px 0 ;
+    
+  }
+  header ul {
+    display: inline;
+    list-style: none;    
+    
+  }
+  header ul li {
+    display: inline;
+    font-size: 15x;
+   padding-bottom: 40px ;
+   /* text-align: center; */
+  }
+  header ul li a {
+    /* text-align: center; */
+    padding-left: 15px;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 34px;
+  }
+  header ul li:first-child a {
+
+     color: var(--main-color);
+    border-bottom: var(--main-color) solid 1px;
+  
+  }
+  header ul li a:hover {
+    color: var(--main-color);
+    border-bottom: var(--main-color) solid 1px;
+  }
+
+ header .left {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   
+ }
+ hr {
+  background-color: rgba(209, 209, 209, 0.658);
+  border: 0;
+  height: .5px;
+ }
+  header .left hr {
+    display: inline-block;
+    margin-right: 20px;
+    background-color: white;
+    margin-left: 20px;
+    width: 1px;
+    height: 30px;
+  }
+  header .left i {
+    font-size: 19px;
+    color: white;
+  }
+  header .left i:first-child {
+    font-size: 25px;
+    color: white;
+    display: none;
+  }
+/* end header */
+/* start landing */
+.landing {
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative; 
+}
+.layer {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+}
+.landing .content {
+  position: relative;
+  z-index: 1;
+  margin-top: 25px;
+}
+.landing .box {
+  background-color: var(--transparent-color);
+  max-width: 750px;
+  display: grid;
+  grid-template-columns: 25% 75% ; 
+  grid-template-rows: 230px;
+  padding: 50px 50px 50px 25px; 
+  align-items: center;
+}
+.landing .box i {
+  font-size: 40px;
+  color: white;
+}
+.landing .content .box .hello p {
+  line-height: 2;
+  padding-top: 20px;
+  color: white;
+}
+.landing .content .box .hello h1 {
+  color: white;
+  font-weight: normal;
+}
+.landing .content i:last-child {
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  top: 145px;
+  right: 30px;
+}
+.landing .circles {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 1%;
+ 
+ 
+}
+.landing .circles div{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: white solid 1px;
+  margin-left: 8px;
+  background-color: transparent;
+}
+.landing .circles div:nth-child(2){
+  background-color: var(--main-color);
+}
+
+@media (max-width: 768px) { 
+
+  .landing .content i {
+    display: none;
+  }
+  .landing .box {
+  grid-template-columns: 1fr ; 
+   }
+   .landing .content {
+    margin-top: -10px;
+    z-index: 0;
+  }
+  header .left ul{
+    display: none;
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.7);
+    width: 100%;
+    left: 0;
+    top: 50%;
+    padding:0;
+    
+   }
+   header .left ul li{ 
+     display: block;
+    padding: 15px 0 15px 15px;
+    width: 100%
+   } 
+   header .left ul li a{ 
+   padding: 15px 0;
+    width: 100%;
+    padding-right: 100%;
+    
+  }
+  header .left i:first-child {
+    display: inline-block;
+  }
+
+  header .left i:first-child:hover ~ ul , header .left ul:hover {
+    display: block;
+  }
+
+}
+/* end landing and header */
