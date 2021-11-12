@@ -320,3 +320,131 @@ font-size: 50px;
     }
 }
 /* end services */
+/* start design */
+.design{
+  height: 650px;
+  background-image: url(../images/design-features.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns:repeat(auto-fill,minmax(50%,1fr)) ;
+  overflow: hidden;
+  position: relative;
+}
+.design .layer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.678);
+  position: absolute;
+  z-index: 1;
+}
+
+.design .list-bg{
+  background-color: var(--transparent-color);
+  height: 350px;
+  margin-top: 150px;
+  padding: 50px;
+  z-index: 2;
+}
+.design .list-bg h2 {
+  padding-bottom: 40px;
+  color: white;
+  font-weight: normal;
+}
+.design .list-bg ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.design .list-bg ul li {
+  padding-bottom: 30px;
+  color: white;
+}
+.design .list-bg i {
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 20px;
+  color: white;
+}
+.design .mobile {
+margin: auto;
+margin-top: 250px;
+z-index: 2;
+}
+/* for small screens */
+@media (max-width: 768px) { 
+  .design .mobile {
+  display: none;
+  }
+  .design{ 
+    grid-template-columns: 100%;
+  }
+}
+/* end design */
+/* start portfolio */
+.portfolio {
+  padding-top: 100px;
+}
+.portfolio .words {
+  margin: 100px auto 50px auto;
+  width: fit-content;
+  font-size: 18px;
+}
+.portfolio .words span{
+  padding: 6px 8px;
+}
+.portfolio .words span:first-child{
+  background-color: var(--main-color);
+  text-align: center;
+  color: white;
+}
+.portfolio .photos img {
+  height: 99%;
+  width: 100%;
+  transition-duration: 0.5s;
+ 
+}
+.photos .pic {
+  overflow: hidden;
+  position: relative;
+}
+.portfolio .photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+
+}
+.portfolio a {
+  background-color: var(--main-color);
+  margin: 30px 47%;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  
+}
+.portfolio .photos .awsome {
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+  padding: 15px 20px;
+  transition-duration: 0.3s;
+}
+.awsome span {
+  font-size: 17px;
+  display: block;
+  padding-bottom: 12px;
+}
+.awsome span:nth-child(2){
+  color: var(--main-color);
+}
+/* animation */
+.portfolio .photos .pic:hover img {
+  transform: scale(1.1) rotate(4deg);
+  
+  /* background-color: red; */
+}
+.portfolio .photos .pic:hover .awsome {
+  bottom: 0;
+}
+/* end protfolio */
