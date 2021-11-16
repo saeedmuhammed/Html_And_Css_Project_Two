@@ -168,7 +168,7 @@ body {
   top: 145px;
   right: 30px;
 }
-.landing .circles {
+.circles {
   width: 100%;
   height: 50px;
   display: flex;
@@ -178,7 +178,7 @@ body {
  
  
 }
-.landing .circles div{
+.circles div{
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -187,7 +187,7 @@ body {
   margin-left: 8px;
   background-color: transparent;
 }
-.landing .circles div:nth-child(2){
+.circles div:nth-child(2){   
   background-color: var(--main-color);
 }
 
@@ -383,6 +383,7 @@ z-index: 2;
 /* start portfolio */
 .portfolio {
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 .portfolio .words {
   margin: 100px auto 50px auto;
@@ -448,3 +449,444 @@ z-index: 2;
   bottom: 0;
 }
 /* end protfolio */
+/* start video */
+.video {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+.video video {
+  width: 100%;
+  
+}
+.video .black {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.video .text2 {
+  color: white;
+  background-color: var(--transparent-color);
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 30px 0;
+}
+.video .text2 * {
+  padding-bottom: 3%;
+}
+
+.video .text2 .h2 {
+  font-weight: lighter;
+}
+.video .text2 a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 25px;
+
+}
+/* end video */
+/* start about us */
+.about{
+  padding-top: 70px;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.about .title {
+  padding-bottom: 120px;
+}
+.about .image img {
+  position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+    max-width: 100%;
+  
+}
+/* end about */
+/* start numbers */
+.numbers {
+  background-image: url(../images/stats.png);
+  background-size: cover;
+  height: fit-content;
+  position: relative;
+  z-index: -1;
+  padding: 10% 0 65px 0;
+ 
+}
+.numbers::before{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.numbers .num {
+  padding-top: 30px;
+  background-color: var(--transparent-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  justify-content: space-between;
+  text-align: center;
+}
+.numbers .num * {
+  padding-bottom: 30px;
+  color: white;
+}
+.numbers .num h1 {
+  font-size: 48px;
+}
+.numbers .num .boxx {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+.numbers .num .bg{
+  background-color: black;
+  margin-bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
+}
+.numbers .num i {
+  font-size: 23px;
+  padding-top: 10px;
+  
+}
+/* end numbers */
+/* start skills */
+.skills {
+  padding-bottom: 50px;
+}
+.skills .cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+  column-gap: 100px;
+}
+.skills .cont .right{
+ 
+  height: 100vh;
+
+}
+.skills .cont .left{
+ 
+  height: 100vh;
+  position: relative;
+}
+.skills .cont .sub-text{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+.sub-text p {
+  margin-top: 30px;
+  line-height: 40px;
+  color: #777;
+  font-size: 18px;
+}
+.sub-text h3 {
+  font-weight: lighter;
+}
+.skills .profile {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-bottom: 20px;
+}
+.skills .profile .avatar img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  
+}
+.skills .profile .words {
+  position: relative;
+  
+}
+.skills .profile .words p {
+  line-height: 30px;
+}
+.skills .profile .words p:last-of-type {
+  direction: rtl;
+  color: #777;
+  padding: 5px 0;
+  border: none;
+}
+.skills .profile .words hr {
+ 
+  width: 100%;
+  height: 1px;
+  background-color: #777;
+  
+}
+.skills .left .circles div{
+  width: 15px;
+  height: 15px;
+  border: #777 solid 1px;
+}
+.skills .left .circles div:nth-child(2){   
+
+border: transparent;
+}
+.skills .right .dgree {
+  margin-bottom: 35px;
+}
+.skills .right .dgree h4 {
+font-weight: lighter;
+}
+.skills .right .dgree div {
+  display: inline-block;
+  height: 30px;
+ margin-top: 20px;
+ position: relative;
+}
+.skills .right .dgree .one {
+  background-color: var(--main-color);
+  width: 90%;
+}
+.skills .right .dgree:nth-child(3) .one{
+  width: 85%;
+}
+.skills .right .dgree:nth-child(4) .one{
+  width: 80%;
+}
+.skills .right .dgree .one::after {
+  content: "90%";
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: -20px;
+  top: -45px;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border-radius: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.skills .right .dgree:nth-child(3) .one::after {
+  content: "85%";
+}
+.skills .right .dgree:nth-child(4) .one::after {
+  content: "80%";
+}
+.skills .right .dgree .two {
+  float: right;
+  background-color: #dedadc;
+  width: 10%;
+}
+.skills .right .dgree:nth-child(3) .two{
+  width: 15%;
+}
+.skills .right .dgree:nth-child(4) .two{
+  width: 20%;
+}
+.skills .right .dgree .two::before { 
+ content: ""; 
+ width: 0px;
+ height: 0px;
+ /* background-color: black; */
+ border: solid 10px;
+ border-color: black transparent transparent transparent;
+ position: absolute;
+ top: -18px;
+ left: -15px;
+}
+/* end skills */
+/* start quote */
+.quote {
+  background-image: url(../images/quote.jpg);
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding: 50px 0;
+  position: relative;
+  z-index: 1;
+}
+.quote h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  margin-bottom: 50px;
+}
+.quote::after{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right:0;
+  top: 0;
+  z-index: -1;
+
+}
+/* end quote */
+/* start pricing */
+.pricing{
+  padding: 100px 0;
+  text-align: center;
+}
+.pricing .pricee {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(230px,1fr));
+  column-gap: 50px;
+  row-gap: 50px;
+  text-align: center;
+  padding: 80px 0 100px 0;
+  
+}
+.pricing .pricee .price * {
+  margin-bottom: 20px;
+}
+.price h2 {
+  font-weight: lighter;
+}
+.pricee .price h1 span {
+  font-size: 60px;
+}
+.price sup {
+  position: relative;
+  top: -30px;
+  left: -5px;
+  font-weight: lighter;
+}
+.pricee .price h3 {
+  font-weight: lighter;
+  font-size: 15px;
+}
+.pricee .price hr {
+  height: 1px;
+  border: 0;
+  margin: auto;
+  background-color: var(--main-color);
+}
+.pricee .price hr:last-of-type {
+  margin-bottom: 50px;
+}
+.pricee .price hr:nth-of-type(3) ,.price hr:nth-of-type(4), .price hr:nth-of-type(5) {
+  width: 55%;
+}
+.pricee .price a {
+  text-decoration: none;
+  width: 50px;
+  height: 30px;
+  padding: 22px 20px;
+  border: solid 1px var(--main-color);
+}
+.pricing .contact span {
+  font-size: 22px;
+
+}
+.pricing .contact div {
+  margin-top: 40px;
+}
+.pricing .contact a{
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 25px;
+  
+}
+/* end pricing */
+/* start your email */
+.your-email{
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  height: 30vh ;
+  position: relative;
+  z-index: 1;
+}
+
+.your-email * {
+  display: inline-block;
+}
+.your-email::after{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right:0;
+  top: 0;
+  z-index: -1;
+}
+.your-email .emaill{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  max-width: 1500px;
+}
+.your-email .email {
+  background-color: transparent;
+  border: solid 1px white;  
+  color: white;
+  position: relative;
+  top: 50%;
+  width: 450px;
+  height: 60px;
+  left: 0;
+}
+.your-email .email input {
+  width: 60%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  caret-color: var(--main-color);
+  margin-left: 5px;
+}
+.your-email .email input::placeholder{
+  color: white;
+  font-size: 15px;
+}
+.your-email .email input:focus{
+  outline: none;
+  color: white;
+}
+.your-email .email i {
+  margin-left: 15px;
+}
+.your-email .email div {
+  color: white;
+  position: absolute;
+  width: 30%;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  background-color: var(--main-color);
+}
+.your-email .email div a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  padding-top: 17px;
+}
+.your-email .email div a:hover {
+cursor: default;
+}
+.your-email p {
+  color: white;
+  margin-top: 10px;
+  font-size: 18px;
+  max-width: 900px;
+  padding-left: 20px;
+}
+
+/* end your email */
+/* start contact us */
+/* end contact us */
