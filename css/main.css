@@ -499,7 +499,7 @@ z-index: 2;
 /* start about us */
 .about{
   padding-top: 70px;
-  height: 85vh;
+  height: 560px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -574,19 +574,16 @@ z-index: 2;
 /* start skills */
 .skills {
   padding-bottom: 50px;
-  height: 120vh;
 }
 .skills .cont {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
   column-gap: 100px;
 }
-.skills .cont .right{
-  height: 120vh;
-}
+
 .skills .cont .left{
  
-  height: 120vh;
+ 
   position: relative;
 }
 .skills .cont .sub-text{
@@ -706,7 +703,6 @@ font-weight: lighter;
  content: ""; 
  width: 0px;
  height: 0px;
- /* background-color: black; */
  border: solid 10px;
  border-color: black transparent transparent transparent;
  position: absolute;
@@ -966,6 +962,7 @@ outline: none;
   }
   .contact-us .text {
     text-align: center;
+    width: 50%;
   }
   .contact-us .text .text-one {
     margin-bottom: 50px;
